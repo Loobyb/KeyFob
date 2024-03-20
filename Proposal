@@ -1,0 +1,102 @@
+Group 12: Bryan Looby, Andrew Oliwa
+CS492 Project Proposal
+KeyFob Encryption
+1. Introduction:
+We will be implementing a GUI program in Python. This program will simulate the process of unlocking a car with a key fob. The user will be able to create an account, and once the user signs in they will have the ability to verify that the encryption works. The test will work in the GUI. When the test button is selected it will notify the user which ‘car’ is theirs, the user will also be able to verify that the program encryption works as intended.
+The topics in the course that will be helpful for our project will be topics on Symmetric Key Encryption and more specifically the TEA algorithm. This will be how the car knows which key fob to respond to. The key fob and the car will use the same key to verify they are to be ‘connected’ together. The fob will be responsible for the encryption and the car will be responsible for the decryption and verification of the sent key.
+Another topic from the course that will help us with our project will be crypto hashing. This will be used to ensure the user’s login password is stored in a safe way. This ensures that each user’s account cannot be compromised.
+The last topic that will be helpful for our project is a constant reminder of CIA. Confidentiality, integrity, and authenticity. These topics should be paramount in the construction of our program.
+2. Background and Literature Review:
+o   Provide a list/table of the existing knowledge and research.
+ Encryption algorithms
+ How a key fob works
+How a car verifies its key fob
+-          Identify any gaps or limitations in the current understanding of the topic.
+ The biggest knowledge gap we have for our program is that a key fob sends out radio signals that the car can capture and then read. We are unsure of the steps needed to be able to accomplish building a ‘real’ key fob.
+-          Discuss relevant theories, concepts, or methodologies that will be applied in the project.
+Some relevant concepts that we will be using for this project will be Encryption algorithms. We will be using the TEA encryption as the form of encryption for the key fob, and we will be using the hash function to encrypt the user passwords.
+Another concept that will be applied will be authentication and authorization. This will be able to verify the users’ ID during sign-in to ensure the correct key fob is made.
+3. Methodology:
+-          Describe the research design or methodology that will be used to achieve the project objectives.
+  We will be using Diagnostic research to determine what is missing from our project and how we will be able to fix the project.
+We will be using the TEA algorithm to ensure the keyfob transmits its data securely.
+We will also be using a Crypto hashing function to encrypt user’s data.
+-          Explain the data collection methods, tools, or techniques that will be employed.
+The Tea algorithm to encrypt/decrypt the key.
+Hash function to hash user passwords
+ Usability Testing- to ensure our program works how we intended
+-          Outline the steps or procedures that will be followed to conduct the project.
+o   A flowchart/diagram is required to show the steps or procedures.
+Project Initiation
+Research and Planning
+Design Phase
+Development Phase
+Testing
+Presentation
+ 4. Expected Outcomes:
+-          Describe the anticipated results or outcomes of the project.
+We anticipate that we will have a gui program that will simulate how a key fob works. This will help give people  the knowledge of how something they use everyday is made, in a way to keep everyone’s information safe.
+ 
+5. Timeline:
+-          Provide a detailed timeline or schedule for the project, including key milestones and deadlines.
+o   Project breakdown
+o   GUI design
+o   Code development.
+o   Testing
+o   Implementation
+-          Break down the project into smaller tasks or phases and allocate time accordingly.
+	9 weeks until final
+Project Breakdown
+Resource and information gathering 
+List all program functions in an easy to follow manner 
+Program flowchart - 1 week from survey acceptance (3/17)
+		GUI Design
+Wireframe of program GUI - 3 days (3/20)
+		Code Development
+Code User login and authentication - 1.5 weeks (3/31)
+Code the car’s in the system. - 1.5 weeks (4/10)
+Code the key fob - 1.5 weeks (4/21)
+Implement key fob and car communication - 1.5 weeks (5/1)
+		Testing
+Ensure all use cases are accounted for and the program works as intended - 1 week (5/8)
+		Implementation
+Course project presentation - Project Due Date.
+ 
+6. Resources:
+-          Identify the resources required to complete the project (e.g., equipment, software, materials).
+We will a working computer that has the capabilities to perform all the calculations of encryption and decryption
+We will be using the Python programming language to implement our project
+-          Mention any collaborations or partnerships that will be involved in the project.
+Our group will be collaborating together to create our program (Bryan, Andrew)
+If we run into troubles other resources like tutors, or professors will be contacted for support.
+ 
+7. Ethical Considerations:
+-          Discuss any ethical considerations or potential risks associated with the project.
+We want to avoid harming any of our user’s data or information.
+We will Respect Privacy
+We will be trustworthy
+-          Explain how ethical guidelines or protocols will be followed during the project.
+C.A.R.E
+To avoid the harming of user’s data we will be sure to encrypt all stored information in a secure location. This will prevent unintentional leaks of user data. We will also follow secure coding practice
+To respect the user’s privacy we will only ask for information that is important to make the program work. We will not ask for any unneeded information.
+To be trustworthy we will be transparent on what information is needed from the user and how the program works. This will ensure that all user’s know what is happening to their data.
+
+8. Conclusion:
+-          Summarize the key points of the project proposal.
+We are creating a key fob simulation program with python
+The simulator will authenticate each user to ensure only people in the system will be able to use a key.
+The simulator will authorize each user and restrict them from accessing keys that are not theirs.
+The encryption for user passwords will be done with a crypto hash function, while the encryption for the key fob will be done using the TEA algorithm.
+We will create this project ethically to ensure the proper handling of user data, as well as the proper authentication and authorization of each user/key.
+-          Emphasize the potential impact or significance of the project.
+This project is significant because people use key fobs everyday taking for granted the safety measures that are implemented to keep everyone's data/car safe.
+This project will show the process and implementation of how key fobs work and provide insight into the inner workings of something that is used everyday.
+ 
+
+
+
+9. References:
+-          Include a list of references cited in the proposal using the appropriate citation style (e.g., APA, MLA).
+“Car Key Security Questions.” Information Security Stack Exchange, security.stackexchange.com/questions/133434/car-key-security-questions. Accessed 5 Mar. 2024.
+Gibson, Steve , and Leo Laporte. Web Portal? Yes Please! Firefox V123, LockBit Disrupted. 27 Feb. 2024, disc 963. Podcast.
+
