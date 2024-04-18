@@ -3,6 +3,7 @@ from tkinter import messagebox
 import os
 import hashlib
 
+#login credentials admin,admin
 class myGUI:
     def __init__(self):
         self.current_directory = os.getcwd()
@@ -53,9 +54,31 @@ class myGUI:
         self.button_frame = tk.Frame(self.create_frame)
         self.button_frame.pack()
         self.create_button = tk.Button(self.button_frame,text='Create',command = self.account_creation)
+        self.create_button.pack()
 
     def account_creation(self):
-        
+        username = self.username_entry.get().strip()
+        password = self.password_entry.get().strip()
+        password_hash = hashlib.md5(password.encode()).hexdigest()
+        account_creation = 0
+        try:
+            with open("./information.txt", "a") as file:  # Open in append mode
+                with open("./information.txt", "r") as read_file:  # Open for reading
+                    for line in read_file:
+                        stored_user, stored_pass = line.split(',')
+                        if username == stored_user:
+                            messagebox.showinfo('Error', "Username is already in use")
+                            break
+                    else:
+                        #need a check to make sure passwords match.
+                        #need a check to ensure password is within parameters
+                        file.write(f"{username},{password_hash}\n")
+                        account_creation = 1
+        except FileNotFoundError:
+            messagebox.showerror("Error", "File not found.")
+        if account_creation == 1:
+            messagebox.showinfo("confirm","account creation successful")
+            self.key_fob_window()
 
     def key_fob_window(self):
         self.main_frame.pack_forget()
