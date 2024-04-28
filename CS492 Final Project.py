@@ -105,11 +105,25 @@ class myGUI:
                             break
                     else:
                         #need a check to make sure passwords match.
+                        #Added
+                          if self.password_entry == password:
+                            file.write(f"{self.username},{password_hash}\n")
+                            account_creation = 1
+
                         #need a check to ensure password is within parameters
+                        #Added 
+                          else:
+                                messagebox.showinfo('Pass dont match ')
+                                account_creation = 0
                         file.write(f"{self.username},{password_hash}\n")
                         account_creation = 1
         except FileNotFoundError:
             messagebox.showerror("Error", "File not found.")
+            #added if statement to check for password entry 
+            if password == self.password_entry:
+                file.write(f"{self.username},{password_hash}\n")
+                account_creation = 1
+                
         if account_creation == 1:
             messagebox.showinfo("confirm","account creation successful")
             self.key_fob_window()
